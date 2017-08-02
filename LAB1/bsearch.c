@@ -34,8 +34,15 @@ void input(int ARR[],int n)
 
 int search(int term,int ARR[],int n)
 {
- int i,j,ind;
- 
- if(term<i)
+ int bg,ls,mid;
+ bg=0;
+ ls=n;
+ mid=(bg+ls)/2;
+ if(term<ARR[mid])
+  ls=mid;
+ if(term>ARR[mid])
+  bg=mid;
+ if(term=ARR[mid])
+  return mid; 
 }
 
