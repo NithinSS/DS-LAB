@@ -1,5 +1,5 @@
 #include<stdio.h>
-int refact(int);
+unsigned long int refact(int);
 main()
 {
  int n;
@@ -7,7 +7,7 @@ main()
  scanf("%d",&n);
  printf("\nFactorial of %d is %d\n",n,refact(n));
 }
-int refact(int n)
+unsigned long int refact(int n)
 {
  if(n==0)
   return 1;
