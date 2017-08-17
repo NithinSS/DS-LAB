@@ -85,8 +85,11 @@ int probe(char op,int ele,int a,int p[SIZE])
 void insert(int inf,int p[SIZE])
 {
  int q=hash(inf);
- if(inf==-1)
-  inf=~1;
+ if(!(search(inf,p)==-1))
+  {
+   printf("Already exist");
+   return;
+  }
  if(is_empty(q,p))
   p[q]=inf;
  else
@@ -122,8 +125,14 @@ int search(int i,int p[SIZE])
  }
  q=probe('s',i,q,p);
  if(q==-1)
-  printf("\nNot found!\n");
+  {
+   printf("\nNot found!\n");
+   return -1;
+   }
  else
-  printf("\nFound at %d ",q);
+  { 
+   printf("\nFound at %d ",q);
+   return q;
+   }
 }
 
