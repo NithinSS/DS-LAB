@@ -1,6 +1,7 @@
 // Author   NITHIN S SABU
 //			CS3B
 //			2017
+// Bug : -1 cannot be entered
 #include <stdio.h>
 #define SIZE 13
 void init(int *);
